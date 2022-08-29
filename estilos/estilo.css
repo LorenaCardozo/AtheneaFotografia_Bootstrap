@@ -1,0 +1,516 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/********** GENERAL ************/
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    background-image: url('../assets/img/fondo.webp');
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 2px 2px 8px #661e1e;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+h3 {
+    
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px #661e1e;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+p{
+    font-size: 1.8rem;
+    text-align: justify;
+    padding-top: 2rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+
+/****** GENERAL: BOOTSTRAP*******/
+
+/*le quito el padding y margin a todo lo contenido en el row*/
+.row>*{
+    padding: 0px;
+    margin:0px
+}
+
+
+/*************PAGES *******************/
+
+/*****PAGE - INDEX*********/
+
+.contenedor-img-principal img{
+    width: 100%;
+    height: auto;
+}
+
+.contenedor-athenea{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width:90%;
+    border-radius: 8px;
+    /*margin: 15px 0 15px 0;*/
+    margin: 0 auto;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.50);
+}
+.contenedor-athenea p{
+    font-size: 2em;
+    text-align: center;
+    padding: 5rem 3rem 5rem 3rem ;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.img-mini{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: nowrap;
+    width: 60%;
+}
+
+/******** PAGE - NUESTRO TRABAJO ************/
+
+
+/*************GRILLA - GALERIA DE FOTOS *********/
+
+
+.galeria-foto {
+    display: grid; 
+    grid-template-columns: 48% 48%; 
+    justify-content: center;
+    grid-template-rows: auto auto auto auto auto; 
+    grid-gap: 20px;
+    grid-template-areas: 
+    "foto-izq-fila1 foto-der-vertical"
+    "foto-izq-fila2 foto-der-vertical"
+    "foto-izq-fila3 foto-der-fila3"
+    "foto-izq-vertical foto-der-fila4"    
+    "foto-izq-vertical foto-der-fila5"; 
+}
+
+.foto-izq-fila1{ grid-area: foto-izq-fila1;background-color: white;}
+.foto-izq-fila2{ grid-area: foto-izq-fila2; background-color:white;}
+.foto-izq-fila3{ grid-area: foto-izq-fila3; background-color:white;}
+.foto-izq-vertical{ grid-area: foto-izq-vertical; background-color: white;}
+
+.foto-der-vertical{grid-area: foto-der-vertical; background-color:white;}
+.foto-der-fila5{grid-area: foto-der-fila5; background-color:white;}
+.foto-der-fila3{grid-area: foto-der-fila3; background-color:white;}
+.foto-der-fila4{grid-area: foto-der-fila4; background-color:white;}
+
+.foto-izq-fila1 img, .foto-der-vertical img, .foto-izq-fila2 img,
+.foto-izq-fila3 img, .foto-izq-fila3 img, .foto-der-fila3 img,
+.foto-izq-vertical img, .foto-der-fila4 img, .foto-der-fila5 img
+{
+    width: 95%;
+    max-height: 98%;
+    min-height: 95%;
+    border: solid rgb(224, 224, 224);
+}
+
+.foto-izq-fila1, .foto-izq-fila2, .foto-izq-fila3, .foto-izq-vertical, 
+.foto-der-vertical, .foto-der-fila5, .foto-der-fila3, .foto-der-fila4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.50);
+}
+
+/*******GRILLA - GALERIA VIDEO*********/
+
+.galeria-video{margin-top: 20px;}
+
+.video-trabajo{
+    width: 100%;
+    height: 300px;
+}
+
+
+/********PAGE - CONTACTO************/
+
+.contenedor-contacto{
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedor-mapa {
+    margin-bottom: 10rem;
+    border:rgba(0, 0, 0, 0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    margin-left: 10px;
+
+}
+
+.contenedor-form{
+    margin-bottom: 10rem;
+    background-color: white;
+    padding: 20px;
+    grid-area: contenedor-form;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.50);    
+    width: 45%;
+}
+
+.contenedor-mapa p{
+    font-size: 1.8rem;
+}
+
+.mapa{
+    width: 95%;
+    height: 500px;
+    border:1px dotted grey
+}
+
+.contenedor-check {
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.contenedor-check label{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-check input{
+    height: 20px;
+    width: 20px;
+    margin-left: 2rem;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; 
+    border: 1px solid rgb(184, 184, 184); 
+    font-size: 2rem;
+    resize: none; 
+}
+
+form label {
+    font-size: 1.5rem;
+}
+
+.button-enviar {
+    display: block;
+    background-color: #9e5981;
+    font-size: 2em; 
+    color: 	white;
+}
+
+.button-enviar:hover{
+    background-color: #a7639b;
+    cursor:pointer;
+}
+
+.form-label, .form-control, .form-check-label{font-size: 1.8rem;}
+.form-check-input{width: 2em;height: 2em;}
+
+
+/*************COMPONENTES*************/
+
+/*** COMPONENTE - CAROUSEL - BOOTSTRAP ****/
+
+.carousel, .contenedor-athenea{
+    margin-top: 40px; margin-bottom: 20px;
+}
+
+.carousel-inner {width: 90%; margin: 0 auto;}
+
+
+/******COMPONENTE - NAV - BOOTSTRAP **********/
+
+nav { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.nav-pills .nav-link.active{
+background-color:blueviolet;    
+}
+
+.navbar-dark .navbar-toggler{
+    color: rgb(143, 97, 135);
+    border-color: dimgrey;
+}
+
+.navbar-collapse{justify-content: center;}
+
+
+/*******COMPONENTE - FOOTER *******/
+
+.contenedor-footer{
+    background-color: rgb(143, 97, 135);
+    left:0px;
+    bottom:0px;
+    height: 200px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px 15px 0 0;
+    margin-top: 20px;
+}
+
+.footer-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-lista-menu{
+    padding: 1rem 5rem 0 0rem;
+    list-style-type: none;
+}
+
+.footer-lista-menu li{
+    padding: 0.4rem;
+    font-size: 1.5rem;
+}
+
+.contenedor-footer h4{
+    color: white;
+    font-size: 2rem;
+}
+
+.lista-redes{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.lista-redes li {
+    display: inline;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+.lista-redes .autor{
+    color: yellowgreen;
+    padding: 6rem;
+}
+
+.img-redes{
+    height: 35px;
+    width: 35px;
+    border-radius: 80%;
+}
+
+.redes{
+    width: 100%;
+    padding: 2rem;
+}
+
+.lista-menu li {
+    padding: 0rem 6rem 0rem 0rem;
+    font-size: 1.5rem;
+}
+
+
+/**************/
+
+/*COMPONENTE - SECCIONES (SE USA LA MISMA EN PAGE 'SERVICIOS' Y PAGE 'QUIENES SOMOS'*/
+
+.contenedor-seccion{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 10rem;
+    /*background-color: white;*/
+    width: 95%;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.50);
+    font-size: 1rem;
+    margin:0 auto;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+
+.contenedor-seccion p{
+    font-size: 2em;
+    text-align: justify;
+    padding-top: 2rem;
+}
+
+.seccion-imagen{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-texto{
+    width: 60%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.seccion-texto p{
+    font-size: 2em;
+    text-align: justify;
+    padding-top: 2rem;
+}
+
+.seccion-img{
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.50);
+    width: 93%;
+    margin: 1rem;
+}
+
+.contenedor-seccion.seccion-texto {
+    margin-left: 10px;
+    margin-bottom: 10rem;
+    background-color: transparent;
+    width: 95%;
+    border-radius: none;
+    box-shadow: none;
+    font-size: 1rem;
+}
+
+/*****CARD - BOOTSTRAP*****/
+.card{background-color: none;}
+
+/****************************************/
+
+/*******************************/
+/*MOBILE*/
+
+@media only screen and (max-width: 768px)
+{
+
+    .oculta{
+        display: none;
+    }
+
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        
+        font-size: 2rem;
+    }
+    
+    p{
+        font-size: 1.5rem;
+    }
+
+    /*footer*/
+
+    .redes{
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .redes h4{
+        display: none;
+    }
+
+    .lista-redes{
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .lista-redes li{
+        padding: .5rem;
+    }
+
+    .lista-menu li {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+    
+    /*componente seccion */
+    .contenedor-seccion{
+        flex-direction: column;
+    }
+    .seccion-imagen, .seccion-texto {
+        width: 100%;
+    }
+    /*GALERIA FOTO*/
+    .galeria-foto {
+        grid-template-columns: 100%; 
+        grid-template-rows: auto auto auto auto auto auto auto auto; 
+        grid-template-areas: 
+        "foto-izq-fila1"
+        "foto-der-vertical"
+        "foto-izq-fila2"
+        "foto-izq-fila3"
+        "foto-der-fila3"
+        "foto-izq-vertical"
+        "foto-der-fila4"
+        "foto-der-fila5"; 
+    }
+
+    .contenedor-contacto{
+    flex-direction: column;
+}
+
+.contenedor-mapa {
+    width: 100%;
+
+}
+
+.contenedor-form{
+    width: 100%;
+}
+
+}
+
+
